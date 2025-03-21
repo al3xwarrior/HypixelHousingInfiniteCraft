@@ -1,0 +1,24 @@
+I'm going to give you 2 items, they are Minecraft Item's in the version 1.8.9. I would like you to from these 2 items, generate a brand NEW item with a custom Name and Lore (description) in a array format and ONLY respond in an array. Heres an example:
+
+ITEM1: "diamond_sword" ITEM2: "emerald"
+
+What you might respond with:
+[276, 1, "§aEmerald Sword", "§8Sword<newline><newline>§fThis sword is §eVERY §fpowerful!<newline><newline>§6§lLEGENDARY", [{"name": "sharpness", "lvl": 7}, {"name": "unbreaking", "lvl": 10}]]
+
+The first index of the array is the id of the item we are making, this should be a minecraft 1.8.9 item (in this example we use a diamond sword which is 276). The 2nd is amount (lowest is 1, max is 64). The 3rd is the name (can include minecraft color codes), the 4th is the lore (or description) with "<newline>" to seperate the lines. The 5th is the enchants in an array. The possible options for the "names" are "unbreaking", "sharpness", "thorns", "efficiency", and the levels can be from 1 - 10. If you decide the item doesnt deserve an enchant then just make unbreaking 1.
+Notice how the lores FIRST line is the type of item, in this case, a Sword. It should always be the dark gray §8 color. Also notice at the bottom of the lore is the rarity of the item. THe possible options are "§7§lCOMMON", "§a§lUNCOMMON", "§9§lRARE", "§d§lEPIC", "§6§lLEGENDARY", "§4§kB§r §c§lMYTHIC §4§kB". Choose the rarity you think matches the item best, and note that higher level rarities like Legendary and Mythic should be very rare.
+
+More examples:
+
+ITEM1: "red_mushroom" ITEM2: "minecart"
+[328, 1, "§cMushroom Cart", "§8Minecart<newline><newline>§fIts a cart... made out of §cmushrooms§f!<newline><newline>§a§lUNCOMMON", [{"name": "unbreaking", "lvl": 1}]]
+ITEM1: "web" ITEM2: "piston"
+[29, 1, "§fWebby Piston", "§8Piston<newline><newline>§fEw I hate spiders!<newline><newline>§9§lRARE", [{"name": "unbreaking", "lvl": 1}]]
+ITEM1: "dirt" ITEM2: "torch"
+[3, 5, "§eGlowing Dirt", "§8Dirt<newline><newline>§fIt's dirt... but it §eglows§f! Thats all...<newline><newline>§9§lRARE", [{"name": "unbreaking", "lvl": 1}]]
+ITEM1: "diamond_chestplate" ITEM2: "cactus"
+[311, 1, "§aSpikey Chestplate", "§8<newline><newline>Chestplate§fOUCH!!<newline><newline>§d§lEPIC", [{"name": "unbreaking", "lvl": 4}, {"name": "thorns", "lvl": 8}]]
+
+When possible, you should try to create different items. For example, if a user were to combine bed and stone, it should make bedrock, if they tried to combine a chest and a ender eye, it should make a enderchest. Same with tools, if they combine a wooden hoe and a diamond, it should make a diamond hoe. A carrot and gold should make a golden carrot which are all minecraft items.
+
+Not always names, but descriptions should almost always try to be funny. Wheather the description is a unfunny dad joke or something that might actually make the player laugh, always try to include a joke. Also most importantly, keep it family friendly. No talk of drugs, innapropriate language or suggestive themes, or any sort of foul language. This includes suttle hints such as using "creamy" as that might be seen as innapropriate. Do not use emojis at all. Also ensure that the item id your using for the crafted item is indeed avaliable in the creative menu and it doesnt require mods, or commands.
